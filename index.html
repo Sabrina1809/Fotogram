@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicon_fotogram.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Fotogram</title>
+</head>
+<body onload="startOverview(portugal)">
+    <header>
+        <div class="flex content">
+            <div class="logoBig"></div>
+            <h1 class="fotogram">Fotogram</h1>
+        </div>
+        <div class="selectArea content">
+            <h2 onclick="checkMenu()" id="headerNav" class="closed">Album <span><img id="arrowUpDown" src="./img/icons8-expand-arrow-32.png" alt=""></span></h2>
+            <h2 id="titleCollection">Portugal2021</h2>
+        </div>
+    </header>
+    
+    <nav id="collectionsNav">
+        <div>
+            <input onclick="checkbox(event)" class="checkbox" type="checkbox" name="mallorca2021check" id="mallorca2021">
+            <label for="mallorca2021" onclick="setOverview(mallorca)" id="mallorca2021Label" class="label mallorca2021">Mallorca 2021</label>
+        </div>
+        <div>
+            <input onclick="checkbox(event)" class="checkbox" type="checkbox" name="portugal2021check" id="portugal2021">
+            <label for="portugal2021" onclick="setOverview(portugal)" id="portugal2021Label" class="label portugal2021 ">Portugal 2021</label>
+        </div>
+        <div>
+            <input onclick="checkbox(event)" class="checkbox" type="checkbox" name="tuerkei2022check" id="tuerkei2022">
+            <label for="tuerkei2022" onclick="setOverview(tuerkei)" id="tuerkei2022Label" class="label tuerkei2022">Türkei 2022</label>
+        </div>
+        <div>
+            <input onclick="checkbox(event)" class="checkbox" type="checkbox" name="indien2023check" id="indien2023">
+            <label for="indien2023" onclick="setOverview(indien)" id="indien2023Label" class="label indien2023">Indien 2023</label>
+        </div>
+    </nav>
+    <main>
+        <div class="content">
+            <div class="imgOverview">
+        
+            </div>
+        </div>
+    </main>
+    <div onclick="closeOverlay(event)" id="overlayCtn" class="overlayCtn dNone">
+        <div id="bigImgOverlay" class=" imgDetail">
+            <div class="content imgDetailHeader">
+                <h3 id="imgTitle">Algarve Strand</h3> 
+                <span onclick="closeOverlay(event)" id="close">X</span>
+            </div>
+            <img id="imgBig" class="img imgBig" src="./img/portugal2021/IMG-20240815-WA0030.jpg" alt="">
+            <div class="content imgDetailNav">
+                <button class="buttonLeft" onclick="checkNextImg(-1)" id="btL0">⇦</button>
+                <div class="counter">
+                    <span id="currentCount"></span>
+                    <span>/</span>
+                    <span id="totalCount"></span>
+                </div>
+                <button class="buttonRight" onclick="checkNextImg(1)" id="btR0">⇨</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="content">(C) 2024 Sabrina Fritz</div>
+    </footer>
+
+    <script src="script8.js"></script>
+</body>
